@@ -9,7 +9,11 @@
 
 class snekCpp final : public CGameEngine {
 public:
+    // Global font
     TTF_Font* gFont;
+
+    // Viewport
+    SDL_Rect viewPort;
 
     void Init(const char *title, const int width, const int height, const bool fullscreen) override {
         int flags = 0;
@@ -19,9 +23,11 @@ public:
         mHeight = height;
 
         // Initialize SDL
-        SDL_Init(SDL_INIT_VIDEO);
+        if (SDL_Init(SDL_INIT_VIDEO) < 0) {
+            printf("SDL could not initialize! SDL_Error: %s\n", SDL_GetError());
+        }
 
-        //Set texture filtering to linear
+        // Set texture filtering to linear
         if (!SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "1")) {
             printf("Warning: Linear texture filtering not enabled!");
         }
@@ -32,10 +38,10 @@ public:
         }
 
         // Create the screen window
-        screen = SDL_CreateWindow(title, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, width, height, flags);
+        screen = SDL_CreateWindow(title, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, width, height, flags | SDL_WINDOW_RESIZABLE);
 
         // Create the renderer
-        renderer = SDL_CreateRenderer(screen, -1, SDL_RENDERER_ACCELERATED);
+        renderer = SDL_CreateRenderer(screen, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
 
         mFullscreen = fullscreen;
         mRunning = true;

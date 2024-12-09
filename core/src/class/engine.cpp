@@ -15,9 +15,11 @@ void CGameEngine::Init(const char* title, int width, int height, bool fullscreen
     mHeight = height;
 
     // Initialize SDL
-    SDL_Init(SDL_INIT_VIDEO);
+    if (SDL_Init(SDL_INIT_VIDEO) < 0) {
+        printf("SDL could not initialize! SDL_Error: %s\n", SDL_GetError());
+    }
 
-    //Set texture filtering to linear
+    //  Set texture filtering to linear
     if (!SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "1")) {
         printf("Warning: Linear texture filtering not enabled!");
     }
@@ -36,7 +38,6 @@ void CGameEngine::Init(const char* title, int width, int height, bool fullscreen
     mFullscreen = fullscreen;
     mRunning = true;
 
-    printf("CGameEngine Init\n");
 }
 
 void CGameEngine::Cleanup()

@@ -9,6 +9,9 @@ class CGameState;
 
 class CGameEngine {
 public:
+    int mHeight;
+    int mWidth;
+
     virtual void Init(const char *title, int width, int height, bool fullscreen);
 
     virtual void Cleanup();
@@ -41,9 +44,6 @@ protected:
 
     bool mFullscreen;
     bool mRunning;
-
-    int mHeight;
-    int mWidth;
 };
 
 #endif //ENGINE_H

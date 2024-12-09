@@ -32,7 +32,12 @@ public:
     void setAlpha(Uint8 alpha);
 
     //Renders texture at given point
-    void render(SDL_Renderer* mRenderer, int x, int y, const SDL_Rect* clip = nullptr, double angle = 0.0, const SDL_Point* center = nullptr, SDL_RendererFlip flip = SDL_FLIP_NONE) const;
+    void render(SDL_Renderer *mRenderer, int x, int y, const SDL_Rect *dstrect = nullptr, const SDL_Rect *clip = nullptr, double angle = 0.0, const
+                SDL_Point *center = nullptr, SDL_RendererFlip flip = SDL_FLIP_NONE) const;
+
+    void render(SDL_Renderer *mRenderer, int x, int y, int w, int h, const SDL_Rect *clip = nullptr, double angle = 0.0, const
+                SDL_Point *center = nullptr, SDL_RendererFlip flip = SDL_FLIP_NONE) const;
+
 
     void renderOnce(SDL_Renderer *mRenderer, Uint8 alpha, int x, int y, const SDL_Rect *clip = nullptr, double angle = 0.0, const SDL_Point *center = nullptr, SDL_RendererFlip flip = SDL_FLIP_NONE) const;
 

@@ -77,6 +77,48 @@ build CMakeFiles/snekCpp.dir/core/src/class/LTexture.cpp.o: CXX_COMPILER__snekCp
   OBJECT_DIR = CMakeFiles/snekCpp.dir
   OBJECT_FILE_DIR = CMakeFiles/snekCpp.dir/core/src/class
 
+build CMakeFiles/snekCpp.dir/core/src/class/GameScreen.cpp.o: CXX_COMPILER__snekCpp_unscanned_Debug /Users/doqin/CLionProjects/snekCpp/core/src/class/GameScreen.cpp || cmake_object_order_depends_target_snekCpp
+  DEP_FILE = CMakeFiles/snekCpp.dir/core/src/class/GameScreen.cpp.o.d
+  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -mmacosx-version-min=14.6 -fcolor-diagnostics
+  INCLUDES = -I/Users/doqin/CLionProjects/snekCpp/./core/src/class -I/opt/homebrew/Cellar/sdl2/2.30.9/include -isystem /opt/homebrew/Cellar/sdl2/2.30.9/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2_image/2.8.2_2/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2_mixer/2.8.0/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2_ttf/2.22.0/include/SDL2
+  OBJECT_DIR = CMakeFiles/snekCpp.dir
+  OBJECT_FILE_DIR = CMakeFiles/snekCpp.dir/core/src/class
+
+build CMakeFiles/snekCpp.dir/core/src/class/bodyPart.cpp.o: CXX_COMPILER__snekCpp_unscanned_Debug /Users/doqin/CLionProjects/snekCpp/core/src/class/bodyPart.cpp || cmake_object_order_depends_target_snekCpp
+  DEP_FILE = CMakeFiles/snekCpp.dir/core/src/class/bodyPart.cpp.o.d
+  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -mmacosx-version-min=14.6 -fcolor-diagnostics
+  INCLUDES = -I/Users/doqin/CLionProjects/snekCpp/./core/src/class -I/opt/homebrew/Cellar/sdl2/2.30.9/include -isystem /opt/homebrew/Cellar/sdl2/2.30.9/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2_image/2.8.2_2/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2_mixer/2.8.0/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2_ttf/2.22.0/include/SDL2
+  OBJECT_DIR = CMakeFiles/snekCpp.dir
+  OBJECT_FILE_DIR = CMakeFiles/snekCpp.dir/core/src/class
+
+build CMakeFiles/snekCpp.dir/core/src/class/LDeltaTime.cpp.o: CXX_COMPILER__snekCpp_unscanned_Debug /Users/doqin/CLionProjects/snekCpp/core/src/class/LDeltaTime.cpp || cmake_object_order_depends_target_snekCpp
+  DEP_FILE = CMakeFiles/snekCpp.dir/core/src/class/LDeltaTime.cpp.o.d
+  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -mmacosx-version-min=14.6 -fcolor-diagnostics
+  INCLUDES = -I/Users/doqin/CLionProjects/snekCpp/./core/src/class -I/opt/homebrew/Cellar/sdl2/2.30.9/include -isystem /opt/homebrew/Cellar/sdl2/2.30.9/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2_image/2.8.2_2/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2_mixer/2.8.0/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2_ttf/2.22.0/include/SDL2
+  OBJECT_DIR = CMakeFiles/snekCpp.dir
+  OBJECT_FILE_DIR = CMakeFiles/snekCpp.dir/core/src/class
+
+build CMakeFiles/snekCpp.dir/core/src/class/LTimer.cpp.o: CXX_COMPILER__snekCpp_unscanned_Debug /Users/doqin/CLionProjects/snekCpp/core/src/class/LTimer.cpp || cmake_object_order_depends_target_snekCpp
+  DEP_FILE = CMakeFiles/snekCpp.dir/core/src/class/LTimer.cpp.o.d
+  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -mmacosx-version-min=14.6 -fcolor-diagnostics
+  INCLUDES = -I/Users/doqin/CLionProjects/snekCpp/./core/src/class -I/opt/homebrew/Cellar/sdl2/2.30.9/include -isystem /opt/homebrew/Cellar/sdl2/2.30.9/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2_image/2.8.2_2/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2_mixer/2.8.0/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2_ttf/2.22.0/include/SDL2
+  OBJECT_DIR = CMakeFiles/snekCpp.dir
+  OBJECT_FILE_DIR = CMakeFiles/snekCpp.dir/core/src/class
+
+build CMakeFiles/snekCpp.dir/core/src/class/snekFunc.cpp.o: CXX_COMPILER__snekCpp_unscanned_Debug /Users/doqin/CLionProjects/snekCpp/core/src/class/snekFunc.cpp || cmake_object_order_depends_target_snekCpp
+  DEP_FILE = CMakeFiles/snekCpp.dir/core/src/class/snekFunc.cpp.o.d
+  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -mmacosx-version-min=14.6 -fcolor-diagnostics
+  INCLUDES = -I/Users/doqin/CLionProjects/snekCpp/./core/src/class -I/opt/homebrew/Cellar/sdl2/2.30.9/include -isystem /opt/homebrew/Cellar/sdl2/2.30.9/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2_image/2.8.2_2/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2_mixer/2.8.0/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2_ttf/2.22.0/include/SDL2
+  OBJECT_DIR = CMakeFiles/snekCpp.dir
+  OBJECT_FILE_DIR = CMakeFiles/snekCpp.dir/core/src/class
+
+build CMakeFiles/snekCpp.dir/core/src/class/appleFunc.cpp.o: CXX_COMPILER__snekCpp_unscanned_Debug /Users/doqin/CLionProjects/snekCpp/core/src/class/appleFunc.cpp || cmake_object_order_depends_target_snekCpp
+  DEP_FILE = CMakeFiles/snekCpp.dir/core/src/class/appleFunc.cpp.o.d
+  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -mmacosx-version-min=14.6 -fcolor-diagnostics
+  INCLUDES = -I/Users/doqin/CLionProjects/snekCpp/./core/src/class -I/opt/homebrew/Cellar/sdl2/2.30.9/include -isystem /opt/homebrew/Cellar/sdl2/2.30.9/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2_image/2.8.2_2/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2_mixer/2.8.0/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2_ttf/2.22.0/include/SDL2
+  OBJECT_DIR = CMakeFiles/snekCpp.dir
+  OBJECT_FILE_DIR = CMakeFiles/snekCpp.dir/core/src/class
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target snekCpp
@@ -85,7 +127,7 @@ build CMakeFiles/snekCpp.dir/core/src/class/LTexture.cpp.o: CXX_COMPILER__snekCp
 #############################################
 # Link the executable snekCpp
 
-build snekCpp: CXX_EXECUTABLE_LINKER__snekCpp_Debug CMakeFiles/snekCpp.dir/core/src/main/main.cpp.o CMakeFiles/snekCpp.dir/core/src/class/engine.cpp.o CMakeFiles/snekCpp.dir/core/src/class/MainMenuScreen.cpp.o CMakeFiles/snekCpp.dir/core/src/class/LTexture.cpp.o | /opt/homebrew/Cellar/sdl2/2.30.9/lib/libSDL2.dylib /opt/homebrew/Cellar/sdl2_image/2.8.2_2/lib/libSDL2_image.dylib /opt/homebrew/Cellar/sdl2_mixer/2.8.0/lib/libSDL2_mixer.dylib /opt/homebrew/Cellar/sdl2_ttf/2.22.0/lib/libSDL2_ttf.dylib
+build snekCpp: CXX_EXECUTABLE_LINKER__snekCpp_Debug CMakeFiles/snekCpp.dir/core/src/main/main.cpp.o CMakeFiles/snekCpp.dir/core/src/class/engine.cpp.o CMakeFiles/snekCpp.dir/core/src/class/MainMenuScreen.cpp.o CMakeFiles/snekCpp.dir/core/src/class/LTexture.cpp.o CMakeFiles/snekCpp.dir/core/src/class/GameScreen.cpp.o CMakeFiles/snekCpp.dir/core/src/class/bodyPart.cpp.o CMakeFiles/snekCpp.dir/core/src/class/LDeltaTime.cpp.o CMakeFiles/snekCpp.dir/core/src/class/LTimer.cpp.o CMakeFiles/snekCpp.dir/core/src/class/snekFunc.cpp.o CMakeFiles/snekCpp.dir/core/src/class/appleFunc.cpp.o | /opt/homebrew/Cellar/sdl2/2.30.9/lib/libSDL2.dylib /opt/homebrew/Cellar/sdl2_image/2.8.2_2/lib/libSDL2_image.dylib /opt/homebrew/Cellar/sdl2_mixer/2.8.0/lib/libSDL2_mixer.dylib /opt/homebrew/Cellar/sdl2_ttf/2.22.0/lib/libSDL2_ttf.dylib
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -mmacosx-version-min=14.6
   LINK_LIBRARIES = -Wl,-rpath,/opt/homebrew/Cellar/sdl2/2.30.9/lib  /opt/homebrew/Cellar/sdl2/2.30.9/lib/libSDL2.dylib  /opt/homebrew/Cellar/sdl2_image/2.8.2_2/lib/libSDL2_image.dylib  /opt/homebrew/Cellar/sdl2_mixer/2.8.0/lib/libSDL2_mixer.dylib  /opt/homebrew/Cellar/sdl2_ttf/2.22.0/lib/libSDL2_ttf.dylib
   LINK_PATH = -L/opt/homebrew/Cellar/sdl2/2.30.9/lib

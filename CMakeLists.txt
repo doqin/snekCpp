@@ -19,6 +19,17 @@ add_executable(${PROJECT_NAME}
         core/src/class/LTexture.h
         core/src/class/LTexture.cpp
         core/src/class/GameScreen.h
+        core/src/class/GameScreen.cpp
+        core/src/class/bodyPart.h
+        core/src/class/bodyPart.cpp
+        core/src/class/LDeltaTime.cpp
+        core/src/class/LDeltaTime.h
+        core/src/class/LTimer.cpp
+        core/src/class/LTimer.h
+        core/src/class/snekFunc.cpp
+        core/src/class/snekFunc.h
+        core/src/class/appleFunc.cpp
+        core/src/class/appleFunc.h
 )
 
 #find libraries and packages

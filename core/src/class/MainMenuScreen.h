@@ -12,13 +12,11 @@ class MainMenuScreen final : public CGameState {
 public:
     SDL_Event e;
 
-    SDL_Rect viewPort;
-
     snekCpp* snek;
 
     LTexture gMenuBackground;
 
-    explicit MainMenuScreen(snekCpp* game);
+    MainMenuScreen(snekCpp* game);
     void Init() override;
     void Cleanup() override;
 

@@ -1,10 +1,24 @@
 cmake_minimum_required(VERSION 3.30)
 project(snekCpp)
 
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD 23)
+
+set(INCLUDE ./core/src/class)
+
+include_directories(${INCLUDE})
 
 add_executable(${PROJECT_NAME}
-        core/src/main/c++/main.cpp
+        core/src/main/main.cpp
+        core/src/class/game.h
+        core/src/class/state.h
+        core/src/class/engine.h
+        core/src/class/engine.cpp
+        core/src/class/snekCpp.h
+        core/src/class/MainMenuScreen.h
+        core/src/class/MainMenuScreen.cpp
+        core/src/class/LTexture.h
+        core/src/class/LTexture.cpp
+        core/src/class/GameScreen.h
 )
 
 #find libraries and packages

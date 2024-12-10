@@ -2,7 +2,6 @@
 #ifndef GAMESCREEN_H
 #define GAMESCREEN_H
 
-#include <SDL_events.h>
 #include <vector>
 #include "LTexture.h"
 #include "snekCpp.h"
@@ -91,6 +90,8 @@ public:
     static void ChangeState(snekCpp* game, CGameState* state) {
         game->ChangeState(state);
     }
+
+
 private:
 
     // Time between moves

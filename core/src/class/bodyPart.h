@@ -7,6 +7,8 @@
 #include "snekCpp.h"
 #include "LTexture.h"
 
+class GameScreen;
+
 class BodyPart {
 public:
     int x, y;
@@ -15,13 +17,11 @@ public:
         texture = &snekBody;
         snek = game;
     }
-    BodyPart();
-
     void updateBodyPosition(int x, int y);
 
     void render(SDL_Renderer *mRenderer, int snekX, int snekY, int grid);
 
-    static void updateBodyPartsPosition(std::vector<BodyPart> &bodyParts, int snekXBeforeUpdate, int snekYBeforeUpdate);
+    static void updateBodyPartsPosition(snekCpp *game, GameScreen* state, std::vector<BodyPart> &bodyParts, int snekXBeforeUpdate, int snekYBeforeUpdate);
 private:
     LTexture* texture;
 };

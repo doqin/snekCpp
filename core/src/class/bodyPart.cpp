@@ -6,9 +6,6 @@
 #include "GameScreen.h"
 #include "bodyPart.h"
 
-BodyPart::BodyPart() {
-}
-
 void BodyPart::updateBodyPosition(const int x, const int y) {
     this->x = x;
     this->y = y;
@@ -20,11 +17,12 @@ void BodyPart::render(SDL_Renderer *mRenderer, const int snekX, const int snekY,
     }
 }
 
-void BodyPart::updateBodyPartsPosition(std::vector<BodyPart> &bodyParts, const int snekXBeforeUpdate, const int snekYBeforeUpdate) {
+void BodyPart::updateBodyPartsPosition(snekCpp* game, GameScreen* state, std::vector<BodyPart> &bodyParts,
+                                        const int snekXBeforeUpdate, const int snekYBeforeUpdate) {
     // Update the body part position
     if (bodyParts.size() > 0) {
         bodyParts.erase(bodyParts.begin());
-        BodyPart bodypart;
+        BodyPart bodypart(game, state->snekBody);
         bodypart.updateBodyPosition(snekXBeforeUpdate, snekYBeforeUpdate);
         bodyParts.push_back(bodypart);
     }

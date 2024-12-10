@@ -116,9 +116,7 @@ void GameScreen::HandleEvents() {
                     }
                 }
                 break;
-            default: break;
-            /*
-            else if (e.type == SDL_WINDOWEVENT) {
+            case SDL_WINDOWEVENT:
                 switch (e.window.event) {
                     //Window resized
                     case SDL_WINDOWEVENT_RESIZED:
@@ -126,18 +124,18 @@ void GameScreen::HandleEvents() {
                             snek->viewPort = {0, (e.window.data2 - e.window.data1) / 2, e.window.data1, e.window.data1};
                         else
                             snek->viewPort = {(e.window.data1 - e.window.data2) / 2, 0, e.window.data2, e.window.data2};
-                        snek->mWidth = e.window.data1;
-                        snek->mHeight = e.window.data2;
-                        grid = snek->viewPort.w / 20;
-                        break;
+                    snek->mWidth = e.window.data1;
+                    snek->mHeight = e.window.data2;
+                    grid = snek->viewPort.w / 20;
+                    break;
                     default:
                         break;
                 }
-            }
-            */
+            default: break;
         }
     }
 }
+
 
 void GameScreen::Update() {
     deltaTime->update();
@@ -153,7 +151,7 @@ void GameScreen::Update() {
 
             isDead = checkForDeath();
             checkForOutOfBounds();
-            BodyPart::updateBodyPartsPosition(bodyParts, snekXBeforeUpdate, snekYBeforeUpdate);
+            BodyPart::updateBodyPartsPosition(snek, this, bodyParts, snekXBeforeUpdate, snekYBeforeUpdate);
         }
         checkAppleCollision();
     }
@@ -161,8 +159,12 @@ void GameScreen::Update() {
 
 void GameScreen::Draw() {
     // Clear screen
-    SDL_SetRenderDrawColor(snek->renderer, 0x00, 0x00, 0x00, 0xEE);
+    SDL_SetRenderDrawColor(snek->renderer, 0x2F, 0x2F, 0x2F, 0xFF);
     SDL_RenderClear(snek->renderer);
+
+    // Draw background color
+    SDL_SetRenderDrawColor(snek->renderer, 0x00, 0x00, 0x00, 0xFF);
+    SDL_RenderFillRect(snek->renderer, &snek->viewPort);
 
     if (!isDead)
         snekHead.render(snek->renderer, snekX + snek->viewPort.x, snekY + snek->viewPort.y, grid, grid);

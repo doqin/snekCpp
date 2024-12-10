@@ -31,7 +31,7 @@ void GameScreen::checkAppleCollision() {
     if (appleAvailable && snekX == appleX && snekY == appleY) {
         appleAvailable = false;
         applesEaten++;
-        BodyPart bodyPart;
+        BodyPart bodyPart(snek, snekBody);
         bodyPart.updateBodyPosition(snekXBeforeUpdate, snekYBeforeUpdate);
         bodyParts.insert(bodyParts.begin(), bodyPart);
         if (MOVE_TIME > MOVE_TIME_MIN && applesEaten % 2 == 0) {

@@ -54,7 +54,7 @@ void GameScreen::snekDead() {
         }
         */
     }
-    snekDeathSpriteSheet.render(snek->renderer, snekX - snek->viewPort.x, snekY - snek->viewPort.y, &snekDeathAnim[currentFrame]);
+    snekDeathSpriteSheet.render(snek->renderer, snekX + snek->viewPort.x, snekY + snek->viewPort.y, grid, grid, &snekDeathAnim[currentFrame]);
 }
 
 // Check if snek is out of bounds

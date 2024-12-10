@@ -27,9 +27,9 @@ add_executable(${PROJECT_NAME}
         core/src/class/LTimer.cpp
         core/src/class/LTimer.h
         core/src/class/snekFunc.cpp
-        core/src/class/snekFunc.h
         core/src/class/appleFunc.cpp
-        core/src/class/appleFunc.h
+        core/src/class/EndingScreen.cpp
+        core/src/class/EndingScreen.h
 )
 
 #find libraries and packages

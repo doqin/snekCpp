@@ -55,8 +55,6 @@ void CGameEngine::Cleanup()
         SDL_SetWindowSize(screen, mWidth, mHeight);
     }
 
-    printf("CGameEngine Cleanup\n");
-
     // shutdown SDL
     SDL_Quit();
 }

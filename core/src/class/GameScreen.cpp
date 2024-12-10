@@ -4,6 +4,7 @@
 
 #include "GameScreen.h"
 #include "bodyPart.h"
+#include "EndingScreen.h"
 
 GameScreen::GameScreen(snekCpp *game) {
     this->snek = game;
@@ -37,7 +38,6 @@ void GameScreen::Init() {
     snekDeathSpriteSheet.loadFromFile(snek->renderer, "../assets/snek_death_spritesheet.png");
     apple.loadFromFile(snek->renderer, "../assets/apple.png");
 
-
     snekDeathAnim = new SDL_Rect[MAX_FRAMES];
     // Set sprite clips
     int offsetX = 0;
@@ -64,13 +64,14 @@ void GameScreen::Init() {
 void GameScreen::Cleanup() {
     snekHead.free();
     snekBody.free();
-    snekDeathSpriteSheet.free();
     apple.free();
     snek = nullptr;
     delete[] snekDeathAnim;
     snekDeathAnim = nullptr;
     delete deltaTime;
     deltaTime = nullptr;
+    snekDeathSpriteSheet.free();
+    delete this;
 }
 
 void GameScreen::Pause() {
@@ -92,23 +93,51 @@ void GameScreen::HandleEvents() {
                 if (e.key.repeat == 0) {
                 switch (e.key.keysym.sym) {
                     case SDLK_UP:
-                        if (currentDirection != DOWN) {
-                            directions.push_back(UP);
+                        if (directions.size() < 3)
+                            if (directions.back() != DOWN) {
+                                directions.push_back(UP);
+                            }
+                        else {
+                            if (directions.back() != DOWN) {
+                                directions.pop_back();
+                                directions.push_back(UP);
+                            }
                         }
                     break;
                     case SDLK_DOWN:
-                        if (currentDirection != UP) {
-                            directions.push_back(DOWN);
+                        if (directions.size() < 3)
+                            if (directions.back() != UP) {
+                                directions.push_back(DOWN);
+                            }
+                        else {
+                            if (directions.back() != UP) {
+                                directions.pop_back();
+                                directions.push_back(DOWN);
+                            }
                         }
                     break;
                     case SDLK_LEFT:
-                        if (currentDirection != RIGHT) {
-                            directions.push_back(LEFT);
+                        if (directions.size() < 3)
+                            if (directions.back() != RIGHT) {
+                                directions.push_back(LEFT);
+                            }
+                        else {
+                            if (directions.back() != RIGHT) {
+                                directions.pop_back();
+                                directions.push_back(LEFT);
+                            }
                         }
                     break;
                     case SDLK_RIGHT:
-                        if (currentDirection != LEFT) {
-                            directions.push_back(RIGHT);
+                        if (directions.size() < 3)
+                            if (directions.back() != LEFT) {
+                                directions.push_back(RIGHT);
+                            }
+                        else {
+                            if (directions.back() != LEFT) {
+                                directions.pop_back();
+                                directions.push_back(RIGHT);
+                            }
                         }
                     break;
                     default:
@@ -154,6 +183,9 @@ void GameScreen::Update() {
             BodyPart::updateBodyPartsPosition(snek, this, bodyParts, snekXBeforeUpdate, snekYBeforeUpdate);
         }
         checkAppleCollision();
+    }
+    if (timeElapsed >= 2.f) {
+        snek->ChangeState(new EndingScreen(snek));
     }
 }
 

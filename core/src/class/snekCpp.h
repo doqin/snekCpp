@@ -15,6 +15,8 @@ public:
     // Viewport
     SDL_Rect viewPort;
 
+    bool mMouseFocus = false;
+
     void Init(const char *title, const int width, const int height, const bool fullscreen) override {
         int flags = 0;
 
@@ -32,13 +34,17 @@ public:
             printf("Warning: Linear texture filtering not enabled!");
         }
 
+        if (TTF_Init() < 0) {
+            printf("Warning: SDL_ttf could not initialize! SDL_ttf Error: %s\n", TTF_GetError());
+        }
+
         // Get flags
         if (fullscreen) {
             flags = SDL_WINDOW_FULLSCREEN;
         }
 
         // Create the screen window
-        screen = SDL_CreateWindow(title, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, width, height, flags | SDL_WINDOW_RESIZABLE);
+        screen = SDL_CreateWindow(title, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, width, height, flags);
 
         // Create the renderer
         renderer = SDL_CreateRenderer(screen, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
@@ -46,9 +52,10 @@ public:
         mFullscreen = fullscreen;
         mRunning = true;
 
-        gFont = TTF_OpenFont("../assets/fonts/lazy.ttf", 28);
-
-        printf("CGameEngine Init\n");
+        gFont = TTF_OpenFont("../assets/irrep.ttf", 28);
+        if (gFont == nullptr) {
+            printf("Failed to load gFont! SDL_ttf Error: %s\n", TTF_GetError());
+        }
     }
     void ChangeState(CGameState* state) override
     {

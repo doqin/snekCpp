@@ -42,17 +42,13 @@ bool GameScreen::checkForDeath() {
 // Execute snek dead animation
 void GameScreen::snekDead() {
     stateTime += deltaTime->getDeltaTime();
+    timeElapsed += deltaTime->getDeltaTime();
     if (stateTime >= frameDuration) {
         stateTime = 0.f;
         currentFrame++;
         if (currentFrame >= MAX_FRAMES) {
             currentFrame = 0;
         }
-        /* Not yet implemented
-        if (GameScreen::timeElapsed >= GameScreen::frameDuration * GameScreen::MAX_FRAMES) {
-            GameScreen::snek->ChangeState(GameScreen::snek->gameOver);
-        }
-        */
     }
     snekDeathSpriteSheet.render(snek->renderer, snekX + snek->viewPort.x, snekY + snek->viewPort.y, grid, grid, &snekDeathAnim[currentFrame]);
 }

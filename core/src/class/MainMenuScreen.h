@@ -2,7 +2,6 @@
 #ifndef MAINMENUSCREEN_H
 #define MAINMENUSCREEN_H
 
-#include <SDL_events.h>
 #include "LTexture.h"
 #include "snekCpp.h"
 
@@ -10,7 +9,6 @@ class CGameState;
 
 class MainMenuScreen final : public CGameState {
 public:
-    SDL_Event e;
 
     snekCpp* snek;
 

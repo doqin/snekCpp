@@ -4,7 +4,7 @@
 
 class CGameState {
 public:
-    CGameState() {};
+    CGameState() = default;
     virtual ~CGameState() = default;
 
     virtual void Init() = 0;

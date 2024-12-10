@@ -59,7 +59,7 @@ public:
     // Apple variables
     bool appleAvailable;
     int appleX, appleY;
-    int applesEaten;
+    static inline int applesEaten = 0;
 
     // Time since death
     float timeElapsed;
